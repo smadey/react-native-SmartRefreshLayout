@@ -28,6 +28,9 @@ class SmartRefreshControl extends Component {
     }
 
 
+    beginRefresh=({delayed=-1,duration=250,dragRate=1}={})=>{
+        this.dispatchCommand('beginRefresh',[delayed,duration,dragRate])
+    }
     /**
      * 参数格式为{delayed:number,success:bool}
      * delayed:延迟刷新
